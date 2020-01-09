@@ -1,69 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <!-- Required meta tags-->
     <meta charset="utf-8">
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <title>PhoneGap Developer App</title>
-    <link rel="stylesheet" href="css/app.css" type="text/css"/>
-    <script src="js/ms-viewport.js"></script>
-</head>
-<body ontouchstart="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.bundle.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/bbcr.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
 
-    <div class="container">
-        <div class="inner">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
 
-            <article id="bot">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Awesome App</div>
+            </div>
+          </div>
 
-                <div class="shadow"></div>
+          <!-- Bottom Toolbar -->
+          <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+              <!-- Toolbar links -->
+              <a href="#" class="link">Link 1</a>
+              <a href="#" class="link">Link 2</a>
+            </div>
+          </div>
 
-                <div class="monitor">
-                    <div class="cover"></div>
-                    <form id="login-form" class="faded hidden" novalidate>
-                        <label>&gt; Server Address</label>
-                        <input type="url" id="address" class="offset"></input>
-                        <input type="submit" value="Connect" class="offset"></input>
-                        <label></label>
-                        <label class="info">3-finger tap goes home</label>
-                        <label class="info">4-finger tap refreshes</label>
-                    </form>
-                    <div class="visor pulse">
-                        <label>Loading...</label>
-                        <div class="eye left faded"></div>
-                        <div class="eye right faded"></div>
-                    </div>
-                </div>
-
-                <div class="panel top">
-                    <div class="panel visor-cover"></div>
-                </div>
-
-                <div class="panel bottom"></div>
-
-                <div class="footer faded">
-                    <p>
-                        Share usage data
-                        <input type="checkbox" id="analytic-checkbox" class="tgl tgl-light" />
-                        <label for="analytic-checkbox" class="tgl-btn"></label>
-                    </p>
-                    <a href="http://www.adobe.com/special/misc/terms.html" target="_system">Terms</a>
-                    &amp;
-                    <a href="http://www.adobe.com/special/misc/privacy.html" target="_system">Privacy</a>
-                    <div id="version">
-                        %PHONEGAP_APP_VERSION%
-                    </div>
-                </div>
-            </article>
-
-
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <p>Page content goes here</p>
+            <!-- Link to another page -->
+            <a href="/about/">About app</a>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="cordova.js"></script>
-    <script src="js/zepto.min.js"></script>
-    <script src="js/nacl-util.min.js"></script>
-    <script src="js/nacl-fast.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/deploy.js"></script>
-    <script src="js/analytic.js"></script>
-</body>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7/js/framework7.bundle.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="ja/app.js"></script>
+  </body>
 </html>
